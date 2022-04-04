@@ -12,4 +12,11 @@
     git diff HEAD  ----- 查看已缓存和未缓存的所有变动
     git diff --cached  -----  查看已缓存的所有变动
     git commit -m 'xxxx'   -----  将暂存区内容添加到本地仓库
+
+3、case
+    我们在本地新建了hello_cc.cpp文件，之后执行 git add hello_cc.cpp, git commit -m 'add cpp file'
+    通过git log --oneline 可以查看到本次提交的日志
+    此时，如果我们需要修改这个cpp文件，修改后同样可以和之前一样，add  commit，但是git log时会发现有两条日志！！
+    因为我们修改的是同一个文件，不想日志过多，此时可以先git add ，然后执行
+    git commit --amend --no-edit   ---- 将上一次add commit的文件进行本地修改后，可以使用这条命令
     
